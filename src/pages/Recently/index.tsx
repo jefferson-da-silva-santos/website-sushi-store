@@ -1,5 +1,16 @@
 import React, { type FC, useState } from 'react';
 
+// Importa o hook de tema e as funções de estilo
+import useTheme from '../../hooks/useTheme'; 
+import { 
+  getPrimaryTextStyle, 
+  getParagraphTextStyle,
+  getRecentlyFormStyle,
+  getRecentlyFormInputGroupStyle,
+  getRecentlyFormTitleStyle,
+  getNavGroupStyle,
+} from '../../utils/theme'; 
+
 import leafBranch2 from '../../assets/image/leaf-branch-2.png';
 import leafBranch3 from '../../assets/image/leaf-branch-3.png';
 import spinachLeaf from '../../assets/image/spinach-leaf.png';
@@ -8,6 +19,7 @@ import newsletterSushi from '../../assets/image/newsletter-sushi.png';
 
 const Recently: FC = () => {
   const [email, setEmail] = useState('');
+  const { theme } = useTheme();
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -16,17 +28,25 @@ const Recently: FC = () => {
   };
 
   return (
-    <section className="groupRecently" id="recently">
+    <section className="groupRecently" id="recently" style={getNavGroupStyle(theme)}>
       <img className="arte-4" src={leafBranch2} alt="" />
       <img className="arte-5" src={leafBranch3} alt="" />
       
       <div className="recently">
         <section className="recently-primary">
           <div className="recently-primary__group-texts">
-            <span className="recently-primary__group-texts__suptitle">
+            {/* Aplica estilo ao SPAN (Cor de Parágrafo) */}
+            <span 
+              className="recently-primary__group-texts__suptitle"
+              style={getParagraphTextStyle(theme)}
+            >
               Recently Added
             </span>
-            <h2 className="recently-primary__group-texts__title">
+            {/* Aplica estilo ao H2 (Cor Primária) */}
+            <h2 
+              className="recently-primary__group-texts__title"
+              style={getPrimaryTextStyle(theme)}
+            >
               Sushi Samurai <br />
               Salmón Cheese
               <img
@@ -35,7 +55,11 @@ const Recently: FC = () => {
                 alt="Spinach Leaf Decoration"
               />
             </h2>
-            <p className="recently-primary__group-texts__text">
+            {/* Aplica estilo ao P (Cor de Parágrafo) */}
+            <p 
+              className="recently-primary__group-texts__text"
+              style={getParagraphTextStyle(theme)}
+            >
               Take a look at what's new And do not deprive yourself of a good
               meal enjoy and be happy
             </p>
@@ -53,7 +77,12 @@ const Recently: FC = () => {
         </section>
 
         <section className="recently-secundary">
-          <form className="recently-secundary__form" onSubmit={handleSubmit}>
+          {/* Aplica estilo de Fundo e Sombra do Formulário */}
+          <form 
+            className="recently-secundary__form" 
+            onSubmit={handleSubmit}
+            style={getRecentlyFormStyle(theme)}
+          >
             <img className="arte-6" src={spinachLeaf} alt="" />
             <div className="recently-secundary__form__group-img">
               <img
@@ -63,13 +92,25 @@ const Recently: FC = () => {
               />
             </div>
             <div className="recently-secundary__form__group-texts">
-              <span className="recently-secundary__form__group-texts__suptitle">
+              {/* Aplica estilo ao SPAN (Cor de Parágrafo) */}
+              <span 
+                className="recently-secundary__form__group-texts__suptitle"
+                style={getParagraphTextStyle(theme)}
+              >
                 Newsletter
               </span>
-              <h2 className="recently-secundary__form__group-texts__title">
+              {/* Aplica estilo ao H2 (Cor Branca em ambos os temas) */}
+              <h2 
+                className="recently-secundary__form__group-texts__title"
+                style={getRecentlyFormTitleStyle(theme)}
+              >
                 Subscribe For Offer Updates
               </h2>
-              <div className="recently-secundary__form__group-texts__group-input">
+              {/* Aplica estilo de Fundo para o grupo de input */}
+              <div 
+                className="recently-secundary__form__group-texts__group-input"
+                style={getRecentlyFormInputGroupStyle(theme)}
+              >
                 <input
                   placeholder="Enter email"
                   type="email"
