@@ -1,5 +1,4 @@
 import { type FC } from 'react';
-// Importa o hook de tema e as funções de estilo necessárias
 import useTheme from '../../hooks/useTheme'; 
 import { getPrimaryTextStyle, getParagraphTextStyle, getNavGroupStyle } from '../../utils/theme'; 
 
@@ -33,21 +32,19 @@ const popularDishes = [
 ];
 
 const Popular: FC = () => {
-  // Obtém o tema
+  
   const { theme } = useTheme();
 
   return (
     <section className="groupPopular" id="popular" style={getNavGroupStyle(theme)}>
       <div className="popular">
-        <div className="popular__group-primary">
-          {/* Aplica estilo ao SPAN (Cor de Parágrafo) */}
+        <div className="popular__group-primary" data-aos="zoom-in-up">
           <span 
             className="popular__group-primary__suptitle"
             style={getParagraphTextStyle(theme)} 
           >
             The Best Food
           </span>
-          {/* Aplica estilo ao H2 (Cor Primária) */}
           <h2 
             className="popular__group-primary__title"
             style={getPrimaryTextStyle(theme)}
@@ -64,7 +61,6 @@ const Popular: FC = () => {
               title={dish.title}
               description={dish.description}
               price={dish.price}
-              // O FoodCard aplicará o estilo de card internamente
             />
           ))}
         </div>

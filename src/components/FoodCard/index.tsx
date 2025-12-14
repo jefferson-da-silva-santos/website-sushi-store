@@ -22,6 +22,7 @@ const FoodCard: FC<FoodCardProps> = ({
     <div 
       className={`popular__group-secundary__card-food`}
       style={getFoodCardStyle(theme)}
+      data-aos="zoom-in-up"
     >
       <div className="popular__group-secundary__card-food__img">
         <img

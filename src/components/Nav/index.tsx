@@ -1,12 +1,21 @@
-import { type FC, useEffect, useRef } from "react";
+import { type FC, useEffect, useRef, useState } from "react";
 
 import logoImage from "../../assets/image/logo.png";
 import useTheme from "../../hooks/useTheme";
 import { getFooterLogoStyle, getNavGroupStyle, getNavListMenuStyle, getPrimaryTextStyle } from "../../utils/theme";
+import useMenu from "../../hooks/useMenu";
 
 const Nav: FC = () => {
   const { theme, iconThemeButton, toggleTheme } = useTheme();
   const groupNavRef = useRef<HTMLDivElement>(null);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 900);
+  const { toggleMenu, isMenuOpen, iconMenuButton } = useMenu();
+
+   useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth < 900);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -32,13 +41,14 @@ const Nav: FC = () => {
           <img className="nav__logo__img" src={logoImage} alt="Sushi Logo" />
           Sushi
         </a>
-        <div className="nav__menu">
-          <div className="nav__menu__line"></div>
-          <div className="nav__menu__line"></div>
-          <div className="nav__menu__line"></div>
+        <div className={`nav__menu ${theme}`} onClick={(e) => {
+            e.preventDefault();
+            toggleMenu();
+          }}>
+          <i className={iconMenuButton}></i>
         </div>
 
-        <ul className="nav__list-menu" style={getNavListMenuStyle(theme)}>
+        <ul className={`nav__list-menu ${isMobile ? (isMenuOpen ? "menu-open" : "menu-close") : ""}`} style={getNavListMenuStyle(theme)} >
           <li className="nav__list-menu__item">
             <a className="nav__list-menu__item__item" href="#home" style={getPrimaryTextStyle(theme)}>
               Home

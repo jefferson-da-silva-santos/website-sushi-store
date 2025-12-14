@@ -39,19 +39,17 @@ const socialMediaLinks = [
 ];
 
 const Footer: FC = () => {
-  // Obtém o tema
   const { theme } = useTheme();
 
   return (
     <div className="groupFooter" style={getNavGroupStyle(theme)}>
-      <footer className="footer">
+      <footer className="footer" data-aos="fade-up">
         <img className="arte-7" src={spinachLeaf} alt="" />
         <img className="arte-8" src={springOnion} alt="" />
         <img className="arte-9" src={leafBranch4} alt="" />
 
         <div className="footer__container">
           <div className="footer__container__group-1">
-            {/* Aplica estilo de cor ao Logo */}
             <span
               className="footer__container__group-1__logo"
               style={getFooterLogoStyle(theme)}
@@ -63,7 +61,6 @@ const Footer: FC = () => {
               />
               Sushi
             </span>
-            {/* Aplica estilo ao P (Cor de Parágrafo) */}
             <p
               className="footer__container__group__text"
               style={getParagraphTextStyle(theme)}
@@ -73,7 +70,6 @@ const Footer: FC = () => {
           </div>
 
           <div className="footer__container__group-2">
-            {/* Aplica estilo ao Título (Cor Primária) */}
             <span
               className="footer__container__group-2__title footer-title"
               style={getPrimaryTextStyle(theme)}
@@ -83,7 +79,6 @@ const Footer: FC = () => {
             <ul className="footer__container__group-2__list">
               {mainMenuLinks.map((link) => (
                 <li key={link.name}>
-                  {/* Aplica estilo ao Link (Cor de Parágrafo para links secundários) */}
                   <a href={link.href} style={getParagraphTextStyle(theme)}>
                     {link.name}
                   </a>
@@ -93,7 +88,6 @@ const Footer: FC = () => {
           </div>
 
           <div className="footer__container__group-3">
-            {/* Aplica estilo ao Título (Cor Primária) */}
             <span
               className="footer__container__group-3__title footer-title"
               style={getPrimaryTextStyle(theme)}
@@ -103,7 +97,6 @@ const Footer: FC = () => {
             <ul className="footer__container__group-3__list">
               {infoLinks.map((link) => (
                 <li key={link.name}>
-                  {/* Aplica estilo ao Link (Cor de Parágrafo) */}
                   <a href={link.href} style={getParagraphTextStyle(theme)}>
                     {link.name}
                   </a>
@@ -113,7 +106,6 @@ const Footer: FC = () => {
           </div>
 
           <div className="footer__container__group-4">
-            {/* Aplica estilo ao Título (Cor Primária) */}
             <span
               className="footer__container__group-4__title footer-title"
               style={getPrimaryTextStyle(theme)}
@@ -121,7 +113,6 @@ const Footer: FC = () => {
               Address
             </span>
             <ul className="footer__container__group-4__list">
-              {/* Aplica estilo aos LIs (Cor de Parágrafo) */}
               <li style={getParagraphTextStyle(theme)}>
                 Av. Hacienda 1234 Lima 4321, Perú
               </li>
@@ -130,7 +121,6 @@ const Footer: FC = () => {
           </div>
 
           <div className="footer__container__group-5">
-            {/* Aplica estilo ao Título (Cor Primária) */}
             <span
               className="footer__container__group-5__title footer-title"
               style={getPrimaryTextStyle(theme)}
@@ -151,7 +141,6 @@ const Footer: FC = () => {
           </div>
 
           <div className="footer__container__group-6">
-            {/* Aplica estilo ao SMALL (Cor de Parágrafo) */}
             <small
               className="footer__container__group-6__text"
               style={getParagraphTextStyle(theme)}

@@ -1,6 +1,5 @@
 import React, { type FC, useState } from 'react';
 
-// Importa o hook de tema e as funções de estilo
 import useTheme from '../../hooks/useTheme'; 
 import { 
   getPrimaryTextStyle, 
@@ -34,15 +33,13 @@ const Recently: FC = () => {
       
       <div className="recently">
         <section className="recently-primary">
-          <div className="recently-primary__group-texts">
-            {/* Aplica estilo ao SPAN (Cor de Parágrafo) */}
+          <div className="recently-primary__group-texts" data-aos="fade-right">
             <span 
               className="recently-primary__group-texts__suptitle"
               style={getParagraphTextStyle(theme)}
             >
               Recently Added
             </span>
-            {/* Aplica estilo ao H2 (Cor Primária) */}
             <h2 
               className="recently-primary__group-texts__title"
               style={getPrimaryTextStyle(theme)}
@@ -55,7 +52,6 @@ const Recently: FC = () => {
                 alt="Spinach Leaf Decoration"
               />
             </h2>
-            {/* Aplica estilo ao P (Cor de Parágrafo) */}
             <p 
               className="recently-primary__group-texts__text"
               style={getParagraphTextStyle(theme)}
@@ -67,7 +63,7 @@ const Recently: FC = () => {
               Order Now <i className="bi bi-arrow-right-short"></i>
             </a>
           </div>
-          <div className="recently-primary__group-img">
+          <div className="recently-primary__group-img" data-aos="fade-left">
             <img
               className="recently-primary__group-img__img"
               src={recentlySalmonSushi}
@@ -76,8 +72,7 @@ const Recently: FC = () => {
           </div>
         </section>
 
-        <section className="recently-secundary">
-          {/* Aplica estilo de Fundo e Sombra do Formulário */}
+        <section className="recently-secundary" data-aos="fade-up">
           <form 
             className="recently-secundary__form" 
             onSubmit={handleSubmit}
@@ -92,21 +87,18 @@ const Recently: FC = () => {
               />
             </div>
             <div className="recently-secundary__form__group-texts">
-              {/* Aplica estilo ao SPAN (Cor de Parágrafo) */}
               <span 
                 className="recently-secundary__form__group-texts__suptitle"
                 style={getParagraphTextStyle(theme)}
               >
                 Newsletter
               </span>
-              {/* Aplica estilo ao H2 (Cor Branca em ambos os temas) */}
               <h2 
                 className="recently-secundary__form__group-texts__title"
                 style={getRecentlyFormTitleStyle(theme)}
               >
                 Subscribe For Offer Updates
               </h2>
-              {/* Aplica estilo de Fundo para o grupo de input */}
               <div 
                 className="recently-secundary__form__group-texts__group-input"
                 style={getRecentlyFormInputGroupStyle(theme)}

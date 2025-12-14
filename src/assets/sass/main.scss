@@ -9,14 +9,6 @@ $text-color: #68544b;
 $text-color-light: hsl(19, 8%, 55%);
 $body-color: #fff1eb;
 $container-color: #fff5f0;
-// Váriaveis Cores
-// $first-color: hsl(19, 64%, 58%);
-// $first-color-alt: hsl(19, 64%, 54%);
-// $title-color: #e2d5d0;
-// $text-color: #b4a197;
-// $body-color: #171412;
-// $container-color: #1c1917;
-//Variáveis fontes
 $body-font: "Poppins", sans-serif;
 $title-font: "Lora", serif;
 $subtitle-font: "Dancing Script", cursive;
@@ -28,7 +20,6 @@ $normal-font-size: 0.938rem;
 $small-font-size: 0.813rem;
 $smaller-font-size: 0.75rem;
 $min-height: 100dvh;
-// Font weight
 $font-medium: 500;
 $font-semi-bold: 600;
 
@@ -100,7 +91,7 @@ $font-semi-bold: 600;
   i {
     font-size: 30px;
     margin-top: 3px;
-    transition: all .4s ease;
+    transition: all 0.4s ease;
   }
 
   &:hover {
@@ -108,6 +99,18 @@ $font-semi-bold: 600;
       transform: translateX(4px) scale(120%);
     }
   }
+}
+
+#btn-theme i {
+  font-size: 1.5rem;
+}
+
+.nav__list-menu.menu-open {
+  display: flex !important;
+}
+
+.nav__list-menu.menu-close {
+  display: none !important;
 }
 
 .bi-moon-fill {
@@ -135,7 +138,7 @@ $font-semi-bold: 600;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  transition: all .5s ease;
+  transition: all 0.5s ease;
   text-decoration: none;
 }
 
@@ -198,16 +201,19 @@ body {
       cursor: pointer;
       @include flexbox(none, column, 7px, space-between, stretch);
       background-color: transparent;
-      width: 40px;
-      height: 30px;
 
-      &__line {
-        background-color: #53382c;
-        height: 100%;
-        border-radius: 3px;
-        transition: all 0.5s ease;
+      i {
+        font-size: 3rem;
       }
     }
+
+     &__menu.dark i {
+        color: #fff1eb;
+      }
+
+      &__menu.light i {
+        color: #2c2420;
+      }
 
     &__list-menu {
       list-style-type: none;
@@ -368,7 +374,7 @@ body {
             position: absolute;
             width: 15em;
             bottom: -3px;
-            transition: all .3s ease-in-out;
+            transition: all 0.3s ease-in-out;
           }
         }
 
@@ -411,7 +417,7 @@ body {
 
         &:hover {
           .popular__group-secundary__card-food__img__img {
-            transform: translateY(-5px)
+            transform: translateY(-5px);
           }
         }
       }
@@ -859,7 +865,7 @@ body {
 
   .groupHeader .nav__list-menu {
     position: fixed;
-    @include flexbox(none, column, 1em, center, center);
+    @include flexbox(flex, column, 1em, center, center);
     background-color: $body-color;
     padding: 6em 0 4em 0;
     top: 0;
@@ -1138,16 +1144,15 @@ body {
   opacity: 0;
 }
 .show-card-food-2 {
-  animation: rising 1s ease-in-out .2s 1 normal forwards;
+  animation: rising 1s ease-in-out 0.2s 1 normal forwards;
 }
 
 .hide-card-food-3 {
   opacity: 0;
 }
 .show-card-food-3 {
-  animation: rising 1s ease-in-out .4s 1 normal forwards;
+  animation: rising 1s ease-in-out 0.4s 1 normal forwards;
 }
-
 
 /*=======================| ANIMAÇÕES RECENTLY |=========================*/
 
@@ -1158,7 +1163,6 @@ body {
 .show-recently-1 {
   animation: leftRight 1s ease-in 0s 1 normal forwards;
 }
-
 
 .hide-recently-2 {
   opacity: 0;

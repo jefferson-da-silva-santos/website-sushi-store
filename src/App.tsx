@@ -4,10 +4,22 @@ import About from "./pages/About";
 import Home from "./pages/Home";
 import Popular from "./pages/Popular";
 import Recently from "./pages/Recently";
-import ThemeProvider from "./ThemeProvider";
+import MenuProvider from "./providers/MenuProvider";
+import ThemeProvider from "./providers/ThemeProvider";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
+import AOS from "aos";
 
 function App() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+  }, []);
+
   return (
+    <MenuProvider>
       <ThemeProvider>
         <Home children={<Nav />} />
         <main className="main">
@@ -17,6 +29,7 @@ function App() {
           <Footer />
         </main>
       </ThemeProvider>
+    </MenuProvider>
   );
 }
 

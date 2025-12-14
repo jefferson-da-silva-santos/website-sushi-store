@@ -13,7 +13,7 @@ const Popular: FC = () => {
   return (
     <div className="groupAbout" id="about" style={getNavGroupStyle(theme)}>
       <img src={leafBranch} alt="" className="arte-3" />
-      <section className="about">
+      <section className="about" data-aos="fade-up">
         <div className="about__group-primary">
           <img
             className="about__group-primary__img"

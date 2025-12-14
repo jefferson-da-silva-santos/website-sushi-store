@@ -31,8 +31,7 @@ const Home: FC<HomeProps> = ({ children }) => {
       {children}
 
       <header className="header">
-        <div className="header__group-primary">
-          {/* 2. Aplicar estilo ao H1 (Primary Text Style) */}
+        <div className="header__group-primary" data-aos="fade-right">
           <h1 
             className="header__group-primary__title"
             style={getPrimaryTextStyle(theme)} 
@@ -46,7 +45,6 @@ const Home: FC<HomeProps> = ({ children }) => {
             Sushi Food
           </h1>
 
-          {/* 3. Aplicar estilo ao P (Paragraph Text Style) */}
           <p 
             className="header__group-primary__text"
             style={getParagraphTextStyle(theme)}
@@ -58,7 +56,7 @@ const Home: FC<HomeProps> = ({ children }) => {
             Order Now <i className="bx bx-right-arrow-alt"></i>
           </a>
         </div>
-        <div className="header__group-secundary">
+        <div className="header__group-secundary" data-aos="fade-left">
           <img
             className="header__group-secundary__img"
             src={homeSushiRolls}
