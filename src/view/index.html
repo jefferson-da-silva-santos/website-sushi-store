@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sushi</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/normalize.css" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Lora:wght@500;600&family=Poppins:wght@400;500&display=swap");.footer,.footer__container,.groupAbout .about,.groupHeader .header,.groupHeader .nav,.groupPopular .popular,.groupRecently .recently,.groupRecently .recently .recently-secundary{margin:auto;max-width:1024px;width:95%}.groupHeader .header__group-primary__btn,.groupRecently .recently .recently-primary__group-texts__btn,.groupRecently .recently .recently-secundary__form__group-texts__group-input__btn{align-items:center;background-color:#d56e3f;border-radius:50px;color:#fff;cursor:pointer;display:flex;flex-direction:row;gap:3px;justify-content:center;margin-top:1.5em;padding:.3em 2.2em;position:relative;text-decoration:none;width:-moz-max-content;width:max-content}.groupHeader .header__group-primary__btn i,.groupRecently .recently .recently-primary__group-texts__btn i,.groupRecently .recently .recently-secundary__form__group-texts__group-input__btn i{font-size:30px;margin-top:3px;transition:all .4s ease}.groupHeader .header__group-primary__btn:hover i,.groupRecently .recently .recently-primary__group-texts__btn:hover i,.groupRecently .recently .recently-secundary__form__group-texts__group-input__btn:hover i{transform:translateX(4px) scale(120%)}.bi-moon-fill{cursor:pointer}.groupAbout .about__group-secundary__title,.groupHeader .header__group-primary__title,.groupPopular .popular__group-primary__title,.groupRecently .recently .recently-primary__group-texts__title,.groupRecently .recently .recently-secundary__form__group-texts__title{color:#2c2420;font-family:Lora,serif}.groupAbout .about__group-secundary__title,.groupPopular .popular__group-primary__title,.groupRecently .recently .recently-primary__group-texts__title,.groupRecently .recently .recently-secundary__form__group-texts__title{font-size:2.8em}.groupAbout .about__group-secundary__suptitle,.groupPopular .popular__group-primary__suptitle,.groupRecently .recently .recently-primary__group-texts__suptitle,.groupRecently .recently .recently-secundary__form__group-texts__suptitle{color:#d56e3f;font-family:Dancing Script,cursive;font-size:1.7em}*{box-sizing:border-box;font-family:Poppins,sans-serif;margin:0;padding:0;transition:all .5s ease}.footer__container__group-1__logo,.groupHeader .nav__logo{align-items:stretch;color:#2c2420;display:flex;flex-direction:row;font-family:Lora,serif;font-size:1.1em;font-size:1.2em;font-weight:700;gap:8px;justify-content:flex-start;text-decoration:none}body{background-color:#fff1eb}.groupHeader{align-items:center;display:flex;flex-direction:row;gap:0;justify-content:center;min-height:100dvh;overflow:hidden;position:relative}.groupHeader .arte-1{bottom:auto;left:0;opacity:.15;position:absolute;right:auto;top:10%;transform:rotate(80deg);width:100px}.groupHeader .arte-2{bottom:auto;left:auto;opacity:.15;position:absolute;right:0;top:60%;transform:translateX(27px);width:120px}.groupHeader .groupNav{background-color:#fff1eb;position:fixed;top:0;transition:all .5s ease;width:100%;z-index:900}.groupHeader .nav{align-items:center;display:flex;flex-direction:row;gap:0;justify-content:space-between;padding:1.5em 0}.groupHeader .nav__logo__img{width:25px}.groupHeader .nav__menu{align-items:stretch;background-color:transparent;cursor:pointer;display:none;flex-direction:column;gap:7px;height:30px;justify-content:space-between;width:40px}.groupHeader .nav__menu__line{background-color:#53382c;border-radius:3px;height:100%;transition:all .5s ease}.groupHeader .nav__list-menu{align-items:stretch;display:flex;flex-direction:row;gap:3em;justify-content:flex-start;list-style-type:none}.groupHeader .nav__list-menu__item__item{color:#68544b;font-weight:500;text-decoration:none;transition:all .5s ease}.groupHeader .nav__list-menu__item__item:hover{color:#d56e3f}.groupHeader .header{-moz-column-gap:0;column-gap:0;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:none;padding-top:5em;row-gap:0}.groupHeader .header__group-primary{align-items:stretch;display:flex;flex-direction:column;gap:1em;justify-content:flex-start}.groupHeader .header__group-primary__title{font-size:3.5em;font-weight:400;max-width:8em}.groupHeader .header__group-primary__title__img{width:55px}.groupHeader .header__group-primary__text{color:#68544b;max-width:20em}.groupHeader .header__group-secundary{align-items:center;display:flex;flex-direction:row;gap:0;justify-content:flex-end;position:relative}.groupHeader .header__group-secundary__img{max-width:36em;position:absolute}.groupAbout{align-items:center;display:flex;flex-direction:row;gap:0;justify-content:center;min-height:100dvh;overflow:hidden;position:relative}.groupAbout .arte-3{bottom:auto;left:auto;opacity:.15;position:absolute;right:0;top:20%;transform:rotate(-19deg) translateX(1px);width:130px}.groupAbout .about{-moz-column-gap:5.5em;column-gap:5.5em;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:none;row-gap:0}.groupAbout .about__group-primary{align-items:center;display:flex;flex-direction:row;gap:0;justify-content:center}.groupAbout .about__group-primary__img{max-width:27em}.groupAbout .about__group-secundary{align-items:stretch;display:flex;flex-direction:column;gap:1em;justify-content:flex-start}.groupAbout .about__group-secundary__title{width:9em}.groupAbout .about__group-secundary__title__img{width:45px}.groupAbout .about__group-secundary__text{color:#68544b;margin-top:1em;width:24em}.groupPopular{align-items:center;display:flex;flex-direction:row;gap:0;justify-content:center;min-height:100dvh;overflow:hidden;position:static}.groupPopular .popular{-moz-column-gap:0;column-gap:0;display:grid;grid-template-columns:none;grid-template-rows:10em 1fr;row-gap:0}.groupPopular .popular__group-primary{align-items:center;display:flex;flex-direction:column;gap:0;justify-content:center;text-align:center}.groupPopular .popular__group-secundary{-moz-column-gap:2em;column-gap:2em;display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:none;padding:4em 0 3em;row-gap:0}.groupPopular .popular__group-secundary__card-food{background-color:#fff5f0;border-radius:25px;box-shadow:0 8px 20px hsla(21,44%,60%,.186);-moz-column-gap:0;column-gap:0;display:grid;grid-template-columns:none;grid-template-rows:1fr 2fr;height:17.5em;max-width:18.5em;padding:1em;row-gap:0}.groupPopular .popular__group-secundary__card-food__img{align-items:center;display:flex;justify-content:center;position:relative}.groupPopular .popular__group-secundary__card-food__img__img{bottom:-3px;position:absolute;transition:all .3s ease-in-out;width:15em}.groupPopular .popular__group-secundary__card-food__texts{align-items:center;display:flex;flex-direction:column;gap:6px;justify-content:flex-start;padding:25px 0 10px;position:relative}.groupPopular .popular__group-secundary__card-food__texts__title{color:#2c2420;font-family:Lora,serif;font-size:1.35em}.groupPopular .popular__group-secundary__card-food__texts__description{color:#68544b;font-size:.95em}.groupPopular .popular__group-secundary__card-food__texts__preco{color:#d56e3f;font-size:1.38em;font-weight:500;margin-top:17px}.groupPopular .popular__group-secundary__card-food__texts__btn{align-items:center;background-color:#d56e3f;border-radius:50%;bottom:30px;color:#fff;display:flex;flex-direction:row;font-size:23px;gap:0;height:37px;justify-content:center;position:absolute;right:0;width:37px}.groupPopular .popular__group-secundary__card-food:hover .popular__group-secundary__card-food__img__img{transform:translateY(-5px)}.groupRecently{min-height:0;overflow:hidden;position:relative}.groupRecently .arte-4{bottom:auto;left:0;opacity:.15;position:absolute;right:auto;top:27%;transform:rotate(17deg) translateX(-30px);width:100px}.groupRecently .arte-5{bottom:auto;left:auto;opacity:.15;position:absolute;right:0;top:10%;transform:rotate(-36deg) translateX(22px);width:80px}.groupRecently .recently{-moz-column-gap:0;column-gap:0;display:grid;grid-template-columns:none;grid-template-rows:1fr 1fr;row-gap:0}.groupRecently .recently .recently-primary{-moz-column-gap:0;column-gap:0;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:none;min-height:100dvh;row-gap:0}.groupRecently .recently .recently-primary__group-texts{align-items:stretch;display:flex;flex-direction:column;gap:2em;justify-content:center}.groupRecently .recently .recently-primary__group-texts__title{line-height:12px}.groupRecently .recently .recently-primary__group-texts__title__img{margin-left:10px;transform:rotate(30deg);width:34px}.groupRecently .recently .recently-primary__group-texts__text{color:#68544b;width:24em}.groupRecently .recently .recently-primary__group-img{align-items:center;display:flex;flex-direction:row;gap:0;justify-content:center}.groupRecently .recently .recently-primary__group-img__img{max-width:30em}.groupRecently .recently .recently-secundary{align-items:center;display:flex;flex-direction:row;gap:0;justify-content:center;min-height:50vh}.groupRecently .recently .recently-secundary__form{background-color:#2c2420;border-radius:50px;-moz-column-gap:3em;column-gap:3em;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:none;padding:3em 5em;position:relative;row-gap:0;width:100%}.groupRecently .recently .recently-secundary__form .arte-6{bottom:-38px;left:auto;opacity:1;position:absolute;right:63px;top:auto;transform:rotate(45deg);width:40px}.groupRecently .recently .recently-secundary__form__group-img{align-items:center;display:flex;flex-direction:row;gap:0;justify-content:center}.groupRecently .recently .recently-secundary__form__group-img__img{max-width:20em}.groupRecently .recently .recently-secundary__form__group-texts{align-items:stretch;display:flex;flex-direction:column;gap:0;justify-content:flex-start}.groupRecently .recently .recently-secundary__form__group-texts__title{color:#fff;font-size:2.5em;margin-top:10px;max-width:8em}.groupRecently .recently .recently-secundary__form__group-texts__group-input{align-items:center;background-color:#fff;border-radius:50px;display:flex;flex-direction:row;gap:10px;justify-content:space-between;margin-top:2em;padding:10px}.groupRecently .recently .recently-secundary__form__group-texts__group-input__input{background-color:transparent;border:none;border-radius:50px;font-size:1em;padding:10px;width:100%}.groupRecently .recently .recently-secundary__form__group-texts__group-input__input:focus{outline:none}.groupRecently .recently .recently-secundary__form__group-texts__group-input__btn{margin-top:0;padding:.7em 30px}.groupRecently .recently .recently-secundary__form__group-texts__group-input__btn i{font-size:20px;margin-left:5px;margin-top:3px}.footer{overflow:hidden;position:relative}.footer .arte-7{bottom:20%;left:10%;right:auto;transform:rotate(45deg);width:28px}.footer .arte-7,.footer .arte-8{opacity:1;position:absolute;top:auto}.footer .arte-8{bottom:25%;left:auto;right:25%;transform:rotate(-38deg);width:31px}.footer .arte-9{bottom:0;left:50%;opacity:.15;position:absolute;right:auto;top:auto;transform:translateY(30px);width:130px}.footer__container{-moz-column-gap:4em;column-gap:4em;display:grid;grid-template-columns:2fr 1fr 1fr 1fr 1fr;grid-template-rows:3fr 4em;margin-top:5em;min-height:60vh;row-gap:0}.footer__container__group-1{align-items:stretch;gap:1em;justify-content:flex-start}.footer__container__group-1__logo__img{width:25px}.footer__container__group-6{grid-column:1/-1;grid-row:2/2}.footer__container__group-1{display:flex;flex-direction:column;gap:1.5em}.footer__container__group-1__title{color:#2c2420;font-weight:500}.footer__container__group-1 p{color:#68544b;font-size:.9em;width:15em}.footer__container__group-1__list{display:flex;flex-direction:column;gap:8px;list-style-type:none}.footer__container__group-1__list li{color:#68544b;font-size:.9em}.footer__container__group-1__list a{color:#68544b;font-size:.9em;text-decoration:none}.footer__container__group-2{display:flex;flex-direction:column;gap:1.5em}.footer__container__group-2__title{color:#2c2420;font-weight:500}.footer__container__group-2 p{color:#68544b;font-size:.9em;width:15em}.footer__container__group-2__list{display:flex;flex-direction:column;gap:8px;list-style-type:none}.footer__container__group-2__list li{color:#68544b;font-size:.9em}.footer__container__group-2__list a{color:#68544b;font-size:.9em;text-decoration:none}.footer__container__group-3{display:flex;flex-direction:column;gap:1.5em}.footer__container__group-3__title{color:#2c2420;font-weight:500}.footer__container__group-3 p{color:#68544b;font-size:.9em;width:15em}.footer__container__group-3__list{display:flex;flex-direction:column;gap:8px;list-style-type:none}.footer__container__group-3__list li{color:#68544b;font-size:.9em}.footer__container__group-3__list a{color:#68544b;font-size:.9em;text-decoration:none}.footer__container__group-4{display:flex;flex-direction:column;gap:1.5em}.footer__container__group-4__title{color:#2c2420;font-weight:500}.footer__container__group-4 p{color:#68544b;font-size:.9em;width:15em}.footer__container__group-4__list{display:flex;flex-direction:column;gap:8px;list-style-type:none}.footer__container__group-4__list li{color:#68544b;font-size:.9em}.footer__container__group-4__list a{color:#68544b;font-size:.9em;text-decoration:none}.footer__container__group-5{display:flex;flex-direction:column;gap:1.5em}.footer__container__group-5__title{color:#2c2420;font-weight:500}.footer__container__group-5 p{color:#68544b;font-size:.9em;width:15em}.footer__container__group-5__list{display:flex;flex-direction:column;gap:8px;list-style-type:none}.footer__container__group-5__list li{color:#68544b;font-size:.9em}.footer__container__group-5__list a{color:#68544b;font-size:.9em;text-decoration:none}.footer__container__group-5__group-social{align-items:center;display:flex;justify-content:space-between;width:7em}.footer__container__group-5__group-social i{color:#d36836;font-size:1.3em}.footer__container__group-6{display:flex;flex-direction:column;gap:1.5em}.footer__container__group-6__title{color:#2c2420;font-weight:500}.footer__container__group-6 p{color:#68544b;font-size:.9em;width:15em}.footer__container__group-6__list{display:flex;flex-direction:column;gap:8px;list-style-type:none}.footer__container__group-6__list li{color:#68544b;font-size:.9em}.footer__container__group-6__list a{color:#68544b;font-size:.9em;text-decoration:none}.footer__container__group-6{align-items:flex-start;color:#68544b;flex-direction:row;justify-content:space-between}.footer__container__group-6__group-img{align-items:center;display:flex;gap:15px;justify-content:center}.footer__container__group-6__group-img img{width:30px}@media screen and (max-width:980px){.groupHeader .header{-moz-column-gap:0;column-gap:0;display:grid;grid-template-columns:1fr;grid-template-rows:1fr 1fr;row-gap:1.5em}.groupHeader .header__group-secundary{grid-row:1/1;justify-content:center}.groupHeader .header__group-secundary__img{max-width:20em}.groupHeader .header__group-primary{align-items:center;grid-row:2/2;text-align:center}.groupHeader .header__group-primary__title{font-size:2.5em}.groupHeader .header__group-primary__title__img{width:37px}.groupHeader .header__group-primary__text{color:#68544b;max-width:28em}.groupAbout .arte-3{top:45%;width:120px}.groupAbout .about{-moz-column-gap:0;column-gap:0;display:grid;grid-template-columns:1fr;grid-template-rows:1fr 1fr;row-gap:2em}.groupAbout .about .about__group-secundary{align-items:center;text-align:center}.groupAbout .about .about__group-secundary__title{font-size:2.2em}.groupAbout .about .about__group-secundary__title__img{width:40px}.groupAbout .about__group-primary{grid-row:2/2}.groupAbout .about__group-primary__img{max-width:20em}.groupPopular .popular__group-primary__title{font-size:2.2em}.groupPopular .popular__group-secundary{-moz-column-gap:0;column-gap:0;display:grid;grid-template-columns:1fr;grid-template-rows:1fr 1fr 1fr;row-gap:5em}.groupPopular .popular__group-secundary__card-food{margin:auto;width:100%}.groupRecently .recently .recently-primary{-moz-column-gap:0;column-gap:0;display:grid;grid-template-columns:1fr;grid-template-rows:1fr 1fr;row-gap:0}.groupRecently .recently .recently-primary__group-texts{align-items:center;gap:1.2em;text-align:center}.groupRecently .recently .recently-primary__group-texts__title{font-size:2.2em;line-height:normal;position:relative}.groupRecently .recently .recently-primary__group-texts__title__img{margin-left:30px;position:absolute}.groupRecently .recently .recently-primary__group-img__img,.groupRecently .recently .recently-primary__group-texts__text{max-width:22em}.groupRecently .recently .recently-secundary__form{-moz-column-gap:0;column-gap:0;display:grid;grid-template-columns:1fr;grid-template-rows:1fr;overflow:hidden;position:relative;row-gap:0}.groupRecently .recently .recently-secundary__form__group-img__img{left:-171px;max-width:21em;position:absolute;top:-116px}.groupRecently .recently .recently-secundary__form__group-texts{align-items:center;text-align:center}.groupRecently .recently .recently-secundary__form__group-texts__title{font-size:2.2em}.footer__container{-moz-column-gap:2em;column-gap:2em;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:repeat(4,1fr);row-gap:2em}.footer__container__group-1{grid-column:1/-1}.footer__container__group-6{grid-row:4/4}}@media screen and (max-width:884px){.groupHeader .nav__menu{display:flex;z-index:2}.groupHeader .nav__list-menu{align-items:center;animation:menuFalling .5s ease 0s 1 normal forwards;background-color:#fff1eb;box-shadow:0 0 10px #c5a89b;display:none;flex-direction:column;gap:1em;justify-content:center;left:0;padding:6em 0 4em;position:fixed;top:0;width:100%;z-index:1}@keyframes menuFalling{0%{top:-100%}to{top:0}}}@media screen and (max-width:490px){.groupHeader .header__group-secundary__img{max-width:15em}.groupHeader .header__group-primary__title{font-size:2em}.groupHeader .header__group-primary__title__img{width:30px}.groupHeader .header__group-primary__text{font-size:.8em}.groupHeader .header__group-primary__btn{max-width:14em}.groupAbout .about .about__group-secundary__suptitle{font-size:1.35em}.groupAbout .about .about__group-secundary__title{font-size:1.8em}.groupAbout .about .about__group-secundary__title__img{width:35px}.groupAbout .about .about__group-secundary__text{font-size:.8em}.groupAbout .about__group-primary__img{max-width:14em}.groupPopular .popular__group-primary__suptitle{font-size:1.35em}.groupPopular .popular__group-primary__title{font-size:1.8em}.groupPopular .popular__group-secundary{-moz-column-gap:0;column-gap:0;display:grid;grid-template-columns:1fr;grid-template-rows:1fr 1fr 1fr;row-gap:5em}.groupPopular .popular__group-secundary__card-food{height:15em;margin:auto;max-width:17em}.groupPopular .popular__group-secundary__card-food__img__img{max-width:12em}.groupRecently .recently .recently-primary__group-texts__suptitle{font-size:1.35em}.groupRecently .recently .recently-primary__group-texts__title{font-size:1.8em}.groupRecently .recently .recently-primary__group-texts__title__img{margin-left:10px;position:absolute;width:20px}.groupRecently .recently .recently-primary__group-texts__text{font-size:.8em;max-width:22em}.groupRecently .recently .recently-primary__group-texts__btn{max-width:14em}.groupRecently .recently .recently-primary__group-img__img{max-width:18em}.groupRecently .recently .recently-secundary__form{padding:2em}.groupRecently .recently .recently-secundary__form__group-img__img{left:-190px;max-width:18em;position:absolute;top:-130px}.groupRecently .recently .recently-secundary__form__group-texts__suptitle{font-size:1.35em}.groupRecently .recently .recently-secundary__form__group-texts__title{font-size:1.8em}.groupRecently .recently .recently-secundary__form__group-texts__group-input__input{width:100%}.groupRecently .recently .recently-secundary__form__group-texts__group-input__btn{font-size:.8em;width:8em}.footer__container{-moz-column-gap:2em;column-gap:2em;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:repeat(4,1fr);row-gap:2em}.footer__container__group-1{grid-column:1/-1}.footer__container__group-6{grid-row:4/4}}.hide-header-1{opacity:0}.show-header-1{animation:falling 1s ease-in 0s 1 normal forwards}.hide-header-2{opacity:0}.show-header-2{animation:rising 1s ease-in 0s 1 normal forwards}@keyframes falling{0%{opacity:0;transform:translateY(30%)}to{opacity:1;transform:translateY(0)}}@keyframes rising{0%{opacity:0;transform:translateY(-30%)}to{opacity:1;transform:translateY(0)}}.hide-about-1{opacity:0}.show-about-1{animation:rightLeft 1s ease-in 0s 1 normal forwards}.hide-about-2{opacity:0}.show-about-2{animation:leftRight 1s ease-in 0s 1 normal forwards}@keyframes rightLeft{0%{opacity:0;transform:translateX(15%)}to{opacity:1;transform:translateX(0)}}@keyframes leftRight{0%{opacity:0;transform:translateX(-15%)}to{opacity:1;transform:translateX(0)}}.hide-card-food-1{opacity:0}.show-card-food-1{animation:rising 1s ease-in-out 0s 1 normal forwards}.hide-card-food-2{opacity:0}.show-card-food-2{animation:rising 1s ease-in-out .2s 1 normal forwards}.hide-card-food-3{opacity:0}.show-card-food-3{animation:rising 1s ease-in-out .4s 1 normal forwards}.hide-recently-1{opacity:0}.show-recently-1{animation:leftRight 1s ease-in 0s 1 normal forwards}.hide-recently-2{opacity:0}.show-recently-2{animation:rightLeft 1s ease-in 0s 1 normal forwards}.hide-footer{opacity:0}.show-footer{animation:rising .5s ease-in 0s 1 normal forwards}
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uL3Nhc3MvbWFpbi5zY3NzIiwic3R5bGVzLmNvbXAuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFRLGlKQUFBLENBaUZSLGtMQUdFLFdBQUEsQ0FEQSxnQkFqRlUsQ0FnRlYsU0M1RUYsQ0RpRkEsd0xBaERFLGtCQXdEeUMsQ0FMekMsd0JBdEZZLENBMEZaLGtCQUFBLENBSEEsVUFBQSxDQU1BLGNBQUEsQ0E5REEsWUE0RGlCLENBM0RqQixrQkEyRHVCLENBMUR2QixPQTBENEIsQ0F6RDVCLHNCQXlEaUMsQ0FDakMsZ0JBQUEsQ0FKQSxrQkFBQSxDQUpBLGlCQUFBLENBQ0Esb0JBQUEsQ0FJQSxzQkFBQSxDQUFBLGlCQ3RFRixDRDRFRSw4TEFDRSxjQUFBLENBQ0EsY0FBQSxDQUNBLHVCQzFFSixDRDhFSSxnTkFDRSxxQ0M1RU4sQ0RpRkEsY0FDRSxjQzlFRixDRGlGQSx5UUFFRSxhQWhIWSxDQStHWixzQkM3RUYsQ0RpRkEsOE5BRUUsZUMvRUYsQ0RrRkEsME9BRUUsYUE1SFksQ0EySFosa0NBMUdjLENBNEdkLGVDL0VGLENEa0ZBLEVBSUUscUJBQUEsQ0FIQSw4QkFsSFUsQ0FtSFYsUUFBQSxDQUNBLFNBQUEsQ0FFQSx1QkMvRUYsQ0RrRkEsMERBckdFLG1CQTRHNkMsQ0FKN0MsYUF6SVksQ0E2QlosWUFnSGlCLENBL0dqQixrQkErR3VCLENBSHZCLHNCQTVIVyxDQTBIWCxlQUFBLENBSUEsZUFBQSxDQURBLGVBQUEsQ0E1R0EsT0E4RzRCLENBN0c1QiwwQkE2R2lDLENBTmpDLG9CQ3JFRixDRG9GQSxLQUNFLHdCQ2pGRixDRHNGQSxhQTNIRSxrQkE2SHVDLENBakl2QyxZQWlJaUIsQ0FoSWpCLGtCQWdJdUIsQ0EvSHZCLEtBK0g0QixDQTlINUIsc0JBOEgrQixDQXZIL0IsaUJBaEJXLENBZVgsZUF1SGdDLENBeEhoQyxpQkM0Q0YsQ0QrRUUscUJBekZBLFdBMEYrRCxDQTVGL0QsTUE0RnNELENBN0Z0RCxXQTZGZ0QsQ0FoR2hELGlCQWdH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Q0QvQ00sa0RBQ0UsZUNpRFIsQ0QvQ1EsdURBQ0UsVUNpRFYsQ0Q3Q00saURBQ0UsY0MrQ1IsQ0QxQ00sdUNBQ0UsY0M0Q1IsQ0RuQ00sZ0RBQ0UsZ0JDcUNSLENEbkNNLDZDQUNFLGVDcUNSLENEbENJLHdDQXozQkosaUJBMDNCNkMsQ0ExM0I3QyxZQTAzQjZDLENBNzNCN0MsWUFBQSxDQUNBLHlCQTQzQjJCLENBMzNCM0IsOEJBMjNCZ0MsQ0F6M0JoQyxXQ2k2QkEsQ0R0Q00sbURBR0UsV0FBQSxDQUZBLFdBQUEsQ0FDQSxjQ3lDUixDRHJDVSw2REFDRSxjQ3VDWixDRDNCUSxrRUFDRSxnQkM2QlYsQ0QzQlEsK0RBQ0UsZUM2QlYsQ0QzQlUsb0VBRUUsZ0JBQUEsQ0FEQSxpQkFBQSxDQUVBLFVDNkJaLENEekJRLDhEQUVFLGNBQUEsQ0FEQSxjQzRCVixDRHhCUSw2REFDRSxjQzBCVixDRHJCUSwyREFDRSxjQ3VCVixDRGpCTSxtREFDRSxXQ21CUixDRGpCVSxtRUFHRSxXQUFBLENBRkEsY0FBQSxDQUNBLGlCQUFBLENBRUEsVUNtQlosQ0RmVSwwRUFDRSxnQkNpQlosQ0RmVSx1RUFDRSxlQ2lCWixDRGJZLG9GQUNFLFVDZWQsQ0RiWSxrRkFFRSxjQUFBLENBREEsU0NnQmQsQ0ROQSxtQkEvOEJBLG1CQWc5QmdELENBaDlCaEQsY0FnOUJnRCxDQW45QmhELFlBQUEsQ0FDQSw2QkFrOUJ1QixDQWo5QnZCLGdDQWk5QmdDLENBLzhCaEMsV0MyOUJBLENEVkUsNEJBQ0UsZ0JDWUosQ0RURSw0QkFDRSxZQ1dKLENBQ0YsQ0RKQSxlQUNFLFNDT0YsQ0RKQSxlQUNFLGlEQ09GLENESEEsZUFDRSxTQ01GLENESEEsZUFDRSxnRENNRixDREhBLG1CQUNFLEdBQ0UsU0FBQSxDQUNBLHlCQ01GLENESkEsR0FDRSxTQUFBLENBQ0EsdUJDTUYsQ0FDRixDREhBLGtCQUNFLEdBQ0UsU0FBQSxDQUNBLDBCQ0tGLENESEEsR0FDRSxTQUFBLENBQ0EsdUJDS0YsQ0FDRixDRENBLGNBQ0UsU0NFRixDREFBLGNBQ0UsbURDR0YsQ0RBQSxjQUNFLFNDR0YsQ0REQSxjQUNFLG1EQ0lGLENEREEscUJBQ0UsR0FDRSxTQUFBLENBQ0EseUJDSUYsQ0RGQSxHQUNFLFNBQUEsQ0FDQSx1QkNJRixDQUNGLENEREEscUJBQ0UsR0FDRSxTQUFBLENBQ0EsMEJDR0YsQ0REQSxHQUNFLFNBQUEsQ0FDQSx1QkNHRixDQUNGLENERUEsa0JBQ0UsU0NDRixDRENBLGtCQUNFLG9EQ0VGLENEQ0Esa0JBQ0UsU0NFRixDREFBLGtCQUNFLHFEQ0dGLENEQUEsa0JBQ0UsU0NHRixDRERBLGtCQUNFLHFEQ0lGLENER0EsaUJBQ0UsU0NDRixDRENBLGlCQUNFLG1EQ0VGLENERUEsaUJBQ0UsU0NDRixDRENBLGlCQUNFLG1EQ0VGLENER0EsYUFDRSxTQ0NGLENEQ0EsYUFDRSxpRENFRiIsImZpbGUiOiJzdHlsZXMuY3NzIn0= */
+    </style>
+    <!-- Cabeçalio -->
+
+    <div class="groupHeader" id="home">
+
+      <img src="assets/image/leaf-branch-2.png" alt="" class="arte-1">
+      <img src="assets/image/leaf-branch-4.png" alt="" class="arte-2">
+
+      <div class="groupNav">
+        <nav class="nav">
+          <a href="" class="nav__logo nav__list-menu__item__item">
+            <img class="nav__logo__img" src="assets/image/logo.png" alt="logo" />
+            Sushi
+          </a>
+          <div class="nav__menu">
+            <div class="nav__menu__line"></div>
+            <div class="nav__menu__line"></div>
+            <div class="nav__menu__line"></div>
+          </div>
+          <ul class="nav__list-menu">
+            <li class="nav__list-menu__item">
+              <a class="nav__list-menu__item__item" href="#home">Home</a>
+            </li>
+            <li class="nav__list-menu__item">
+              <a class="nav__list-menu__item__item" href="#about">About Us</a>
+            </li>
+            <li class="nav__list-menu__item">
+              <a class="nav__list-menu__item__item" href="#popular">Popular</a>
+            </li>
+            <li class="nav__list-menu__item">
+              <a class="nav__list-menu__item__item" href="#recently">Recently</a>
+            </li>
+            <li class="nav__list-menu__item">
+              <a id="btn-theme" class="nav__list-menu__item__item" href=""
+                ><i class="bi bi-moon-fill"></i
+              ></a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <header class="header">
+        <div class="header__group-primary hide-header-1">
+          <h1 class="header__group-primary__title">
+            Enjoy Delicious
+            <img
+              class="header__group-primary__title__img"
+              src="assets/image/home-sushi-title.png"
+              alt=""
+            />
+            Sushi Food
+          </h1>
+
+          <p class="header__group-primary__text">
+            Enjoy a good dinner with the best dishes in the restaurant and
+            improve your day.
+          </p>
+
+          <a href="" class="header__group-primary__btn">
+            Order Now <i class="bi bi-arrow-right-short"></i>
+          </a>
+        </div>
+        <div class="header__group-secundary hide-header-2">
+          <img
+            class="header__group-secundary__img"
+            src="assets/image/home-sushi-rolls.png"
+            alt=""
+          />
+        </div>
+      </header>
+    </div>
+
+    <!-- Conteúdo principal -->
+
+    <main class="main">
+      <!-- Aréa Sobre -->
+      <div class="groupAbout" id="about">
+        <img src="assets/image/leaf-branch-1.png" alt="" class="arte-3">
+        <section class="about">
+          <div class="about__group-primary hide-about-1">
+            <img
+              class="about__group-primary__img"
+              src="assets/image/about-sushi.png"
+              alt=""
+            />
+          </div>
+          <div class="about__group-secundary hide-about-2">
+            <span class="about__group-secundary__suptitle">About Us</span>
+            <h2 class="about__group-secundary__title">
+              We Provide
+              <img
+                class="about__group-secundary__title__img"
+                src="assets/image/about-sushi-title.png"
+                alt=""
+              />
+              Healthy Food
+            </h2>
+            <p class="about__group-secundary__text">
+              Food comes to us from our relatives, whether they have wings or
+              roots. This is how we consider food, it also has a cutture it has
+              a history that passes from generation to generation.
+            </p>
+          </div>
+        </section>
+      </div>
+
+      <!-- Popular  -->
+
+      <div class="groupPopular" id="popular">
+        <section class="popular">
+          <div class="popular__group-primary">
+            <span class="popular__group-primary__suptitle">
+              The Best Food
+            </span>
+            <h2 class="popular__group-primary__title">Popular Dishes</h2>
+          </div>
+          <div class="popular__group-secundary">
+            <div class="popular__group-secundary__card-food hide-card-food-1">
+              <div class="popular__group-secundary__card-food__img">
+                <img
+                  class="popular__group-secundary__card-food__img__img"
+                  src="assets/image/popular-onigiri.png"
+                  alt=""
+                />
+              </div>
+              <div class="popular__group-secundary__card-food__texts">
+                <h3 class="popular__group-secundary__card-food__texts__title">
+                  Onigiri
+                </h3>
+                <p
+                  class="popular__group-secundary__card-food__texts__description"
+                >
+                  Japonese Dish
+                </p>
+                <span class="popular__group-secundary__card-food__texts__preco">
+                  $10.99
+                </span>
+                <a
+                  href=""
+                  class="popular__group-secundary__card-food__texts__btn"
+                >
+                  <i class="bi bi-lock"></i>
+                </a>
+              </div>
+            </div>
+
+            <div class="popular__group-secundary__card-food hide-card-food-2">
+              <div class="popular__group-secundary__card-food__img">
+                <img
+                  class="popular__group-secundary__card-food__img__img"
+                  src="assets/image/popular-spring-rols.png"
+                  alt=""
+                />
+              </div>
+              <div class="popular__group-secundary__card-food__texts">
+                <h3 class="popular__group-secundary__card-food__texts__title">
+                  Spring Rolls
+                </h3>
+                <p
+                  class="popular__group-secundary__card-food__texts__description"
+                >
+                  Japonese Dish
+                </p>
+                <span class="popular__group-secundary__card-food__texts__preco">
+                  $15.99
+                </span>
+                <a
+                  href=""
+                  class="popular__group-secundary__card-food__texts__btn"
+                >
+                  <i class="bi bi-lock"></i>
+                </a>
+              </div>
+            </div>
+
+            <div class="popular__group-secundary__card-food hide-card-food-3">
+              <div class="popular__group-secundary__card-food__img">
+                <img
+                  class="popular__group-secundary__card-food__img__img"
+                  src="assets/image/popular-onigiri.png"
+                  alt=""
+                />
+              </div>
+              <div class="popular__group-secundary__card-food__texts">
+                <h3 class="popular__group-secundary__card-food__texts__title">
+                  Sushi Rolls
+                </h3>
+                <p
+                  class="popular__group-secundary__card-food__texts__description"
+                >
+                  Japonese Dish
+                </p>
+                <span class="popular__group-secundary__card-food__texts__preco">
+                  $19.99
+                </span>
+                <a
+                  href=""
+                  class="popular__group-secundary__card-food__texts__btn"
+                >
+                  <i class="bi bi-lock"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- Areá Recently -->
+
+      <div class="groupRecently" id="recently">
+        <img class="arte-4" src="assets/image/leaf-branch-2.png" alt="">
+        <img class="arte-5" src="assets/image/leaf-branch-3.png" alt="">
+        <section class="recently">
+          <section class="recently-primary">
+            <div class="recently-primary__group-texts hide-recently-1">
+              <span class="recently-primary__group-texts__suptitle">
+                Recently Added
+              </span>
+              <h2 class="recently-primary__group-texts__title">
+                Sushi Samurai <br />
+                Salmón Cheese
+                <img
+                  class="recently-primary__group-texts__title__img"
+                  src="assets/image/spinach-leaf.png"
+                  alt=""
+                />
+              </h2>
+              <p class="recently-primary__group-texts__text">
+                Take a look at what's new And do not deprive yourself of a good
+                meal enjoy and be happy
+              </p>
+              <a href="" class="recently-primary__group-texts__btn">
+                Order Now <i class="bi bi-arrow-right-short"></i>
+              </a>
+            </div>
+            <div class="recently-primary__group-img hide-recently-2">
+              <img
+                class="recently-primary__group-img__img"
+                src="assets/image/recently-salmon-sushi.png"
+                alt=""
+              />
+            </div>
+          </section>
+          <section class="recently-secundary">
+            <form class="recently-secundary__form">
+              <img class="arte-6" src="assets/image/spinach-leaf.png" alt="">
+              <div class="recently-secundary__form__group-img">
+                <img
+                  class="recently-secundary__form__group-img__img"
+                  src="assets/image/newsletter-sushi.png"
+                  alt=""
+                />
+              </div>
+              <div class="recently-secundary__form__group-texts">
+                <span class="recently-secundary__form__group-texts__suptitle"
+                  >Newsletter
+                </span>
+                <h2 class="recently-secundary__form__group-texts__title">
+                  Subscribe For Offer Updates
+                </h2>
+                <div class="recently-secundary__form__group-texts__group-input">
+                  <input
+                    placeholder="Enter email"
+                    type="text"
+                    class="recently-secundary__form__group-texts__group-input__input"
+                  />
+                  <a
+                    class="recently-secundary__form__group-texts__group-input__btn"
+                    href=""
+                    >Subscribe <i class="bi bi-send"></i
+                  ></a>
+                </div>
+              </div>
+            </form>
+          </section>
+        </section>
+      </div>
+    </main>
+
+    <!-- Footer do projeto -->
+
+    <div class="groupFooter">
+      <footer class="footer">
+        <img class="arte-7" src="assets/image/spinach-leaf.png" alt="">
+        <img class="arte-8" src="assets/image/spring-onion.png" alt="">
+        <img class="arte-9" src="assets/image/leaf-branch-4.png" alt="">
+        <div class="footer__container hide-footer">
+          <div class="footer__container__group-1">
+            <span class="footer__container__group-1__logo">
+              <img
+                class="footer__container__group-1__logo__img"
+                src="assets/image/logo.png"
+                alt="logo"
+              />
+              Sushi
+            </span>
+            <p class="footer__container__group__text">
+              Food for the body is not enough. There must be food for the soul.
+            </p>
+          </div>
+          <div class="footer__container__group-2">
+            <span class="footer__container__group-2__title footer-title"> Main Menu </span>
+            <ul class="footer__container__group-2__list">
+              <li><p>About</p></li>
+              <li><p>Menus</p></li>
+              <li><p>Clear</p></li>
+              <li><p>Events</p></li>
+            </ul>
+          </div>
+          <div class="footer__container__group-3">
+            <span class="footer__container__group-3__title footer-title"> Information </span>
+            <ul class="footer__container__group-3__list">
+              <li><p>Contact</p></li>
+              <li><p>Order & Returns</p></li>
+              <li><p>Videos</p></li>
+              <li><p>Reservation</p></li>
+            </ul>
+          </div>
+          <div class="footer__container__group-4">
+            <span class="footer__container__group-4__title footer-title"> Address </span>
+            <ul class="footer__container__group-4__list">
+              <li><p>Av. Hacienda 1234 Lima 4321, Perú</p></li>
+              <li><p>9AM - 11PM</p></li>
+            </ul>
+          </div>
+          <div class="footer__container__group-5">
+            <span class="footer__container__group-5__title footer-title"> Social Media </span>
+            <div class="footer__container__group-5__group-social">
+              <a href=""><i class="bi bi-facebook"></i></a>
+              <a href=""><i class="bi bi-instagram"></i></a>
+              <a href=""><i class="bi bi-twitter-x"></i></a>
+            </div>
+          </div>
+          <div class="footer__container__group-6">
+            <small class="footer__container__group-6__text"
+              >© Jefferson Santos</small
+            >
+            <div class="footer__container__group-6__group-img">
+              <img src="assets/image/footer-card-1.png" alt="" />
+              <img src="assets/image/footer-card-2.png" alt="" />
+              <img src="assets/image/footer-card-3.png" alt="" />
+              <img src="assets/image/footer-card-4.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="assets/js/script.js"></script>
+  </body>
+  <script>
+    let menuVisible = false;
+let themeDark = false;
+
+document.addEventListener('DOMContentLoaded', () => {
+  const menuList = getElement('.nav__list-menu');
+  const btnMenu = getElement('.nav__menu');
+  const btnThema = document.getElementById('btn-theme');
+
+  enableDarkTheme();
+
+  //Código que aplica e retira o box shadow do menu fixo quando ele está no topo
+  window.addEventListener('scroll', () => {
+    getElement('.groupNav').style.boxShadow = (window.scrollY === 0) ? 'none' : '0px 0px 10px hsla(20, 15%, 43%, 0.361)';
+  });
+
+  //Código responável pelo abrimento do menu com o click
+  btnMenu.addEventListener('click', () => {
+    menuList.style.display = !menuVisible ? 'flex' : 'none';
+    menuVisible = toggleVariable(menuVisible);
+    toggleColorBtnMenu(getElement('.nav__menu__line', true));
+  });
+
+  //Código para fechar o menu mobile quando o tamanho da tela for alterado
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 884) {
+      menuList.style.display = 'flex';
+      menuVisible = false;
+      getElement('.nav__menu__line', true).forEach(line => {
+        line.style.backgroundColor = 'hsl(19, 16%, 15%)';
+      });
+    } else {
+      menuList.style.display = 'none';
+      menuVisible = false;
+      getElement('.nav__menu__line', true).forEach(line => {
+        line.style.backgroundColor = 'hsl(19, 16%, 15%)';
+      });
+    }
+  });
+
+  //Chamando as funções de observação para o header
+  criarObservacao('.hide-header-1', 'show-header-1');
+  criarObservacao('.hide-header-2', 'show-header-2');
+  //Chamando as funções de observação para o about
+  criarObservacao('.hide-about-1', 'show-about-1');
+  criarObservacao('.hide-about-2', 'show-about-2');
+  //Chamando as funções de observação para o popular
+  criarObservacao('.hide-card-food-1', 'show-card-food-1');
+  criarObservacao('.hide-card-food-2', 'show-card-food-2');
+  criarObservacao('.hide-card-food-3', 'show-card-food-3');
+  //Chamando as funções de observação para o recently
+  criarObservacao('.hide-recently-1', 'show-recently-1');
+  criarObservacao('.hide-recently-2', 'show-recently-2');
+  //Chamando as funções de observação para o footer
+  criarObservacao('.hide-footer', 'show-footer');
+
+  // Alterar tema
+  btnThema.addEventListener('click', event => {
+    event.preventDefault();
+    alterTheme();
+  });
+  
+});
+
+//Função para alterar o tema
+function alterTheme() {
+  document.body.style.backgroundColor = themeDark ? '#fff1eb' : '#12100e';
+  // getElement('.nav__list-menu').style.boxShadow = (themeDark && window.innerWidth <= 884) ? '0px 0px 10px hsl(19, 27%, 69%)' : 'hsl(19deg 64% 54% / 60%) 0px 0px 18px';
+  getElement('.nav__list-menu').style.backgroundColor = themeDark ? '#fff1eb' : '#12100e';
+  getElement('.groupNav').style.backgroundColor = themeDark ? '#fff1eb' : '#12100e';
+  getElement('.recently-secundary__form').style.backgroundColor = themeDark ? '#2c2420' : '#151511';
+  getElement('.recently-secundary__form').style.boxShadow = themeDark ? 'none' : '0px 0px 20px #00000052';
+  getElement('.footer__container__group-1__logo').style.color = themeDark ? '#2c2420' : '#e2d5d0';
+  getElement('.recently-secundary__form__group-texts__group-input').style.backgroundColor = themeDark ? '#ffffff' : '#12100e';
+  
+  getElement('h2', true).forEach(e => {
+    e.style.color = themeDark ? '#2c2420' : '#e2d5d0';
+  });
+  getElement('h1', true).forEach(e => {
+    e.style.color = themeDark ? '#2c2420' : '#e2d5d0';
+  });
+  getElement('.footer-title', true).forEach(e => {
+    e.style.color = themeDark ? '#2c2420' : '#e2d5d0';
+  });
+  getElement('h3', true).forEach(e => {
+    e.style.color = themeDark ? '#2c2420' : '#e2d5d0';
+  });
+
+  getElement('.nav__list-menu__item__item', true).forEach(e => {
+    e.style.color = themeDark ? '#2c2420' : '#e2d5d0';
+  });
+  getElement('.recently-secundary__form__group-texts__title').style.color = themeDark ? 'white' : 'white';
+  getElement('p', true).forEach(e => {
+    e.style.color = themeDark ? '#68544b' : '#b4a197';
+  });
+  getElement('.popular__group-secundary__card-food', true).forEach(e => {
+    e.style.backgroundColor = themeDark ? '#fff5f0' : '#151511';
+    e.style.boxShadow = themeDark ? '0px 8px 20px hsla(21, 44%, 60%, 0.186)' : '0px 8px 20px hsl(0deg 0% 0% / 60%)';
+  });
+  themeDark = toggleVariable(themeDark);
+}
+
+//Função para selecionar elementos do DOM
+function getElement(classElement, multiple = false) {
+  return multiple ? document.querySelectorAll(classElement) : document.querySelector(classElement);
+}
+
+//Função responsável por alternar valores booleanos de variaveis
+function toggleVariable(variable) {
+  return !variable;
+}
+
+//Função responsável por mudar a cor do botão de abrir menu
+function toggleColorBtnMenu(list) {
+  list.forEach(line => {
+    line.style.backgroundColor = menuVisible ? 'hsl(19, 64%, 54%)' : '#53382c';
+  });
+}
+
+//Função responsável por aplicar animações com quando os elementos estão observáveis
+function criarObservacao(classeOculta, classeMostrar) {
+  const observacao = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add(classeMostrar);
+      } else {
+        return;
+      }
+    });
+  });
+
+  const elementosOcultos = document.querySelectorAll(classeOculta);
+  elementosOcultos.forEach((element) => observacao.observe(element));
+}
+
+
+//Função responsável por mudar o tema da página para escuro
+function enableDarkTheme() {
+  getElement('.header__group-primary__btn').style.backgroundColor = 'hsl(19, 64%, 58%)';
+  getElement('.about__group-secundary__suptitle').style.color = 'hsl(19, 64%, 58%)';
+  
+}
+  </script>
+</html>
